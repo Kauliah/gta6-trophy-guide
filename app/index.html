@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Legend — GTA VI Trophy Guide &amp; Tracker</title>
+<meta name="description" content="An offline guide and tracker for all 55 PlayStation 5 trophies of Grand Theft Auto VI, with a roadmap to the platinum and flags on every missable trophy.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <p class="kicker">Grand Theft Auto VI · PlayStation 5</p>
+    <h1>Leonida Legend</h1>
+    <p class="subtitle">Every trophy, every guide, one road to the platinum.</p>
+    <p class="list-makeup">55 trophies · 1 platinum · 2 gold · 6 silver · 46 bronze · 28 hidden · 18 missable</p>
+    <div class="progress-line" role="status">
+      <span id="earnedCount">0 of 55 earned</span>
+      <span class="progress-track"><span id="progressBar" class="progress-fill"></span></span>
+      <span id="progressText">0%</span>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Guide sections">
+  <button type="button" data-view="checklist" class="tab active">Checklist</button>
+  <button type="button" data-view="roadmap" class="tab">Platinum roadmap</button>
+  <button type="button" data-view="missables" class="tab">Missables <span class="tab-badge">18</span></button>
+  <button type="button" data-view="tracker" class="tab">Tracker</button>
+</nav>
+
+<main>
+  <section id="view-checklist" class="view">
+    <div class="controls" aria-label="Checklist controls">
+      <label class="control-search">Search
+        <input id="search" type="search" placeholder="Trophy name, mission, activity…" autocomplete="off">
+      </label>
+      <label>Kind
+        <select id="kindFilter">
+          <option value="all">All kinds</option>
+          <option value="story">Story</option>
+          <option value="side">Strangers &amp; side</option>
+          <option value="activity">Activities</option>
+          <option value="collectible">Collectibles</option>
+          <option value="crime">Heists &amp; crime</option>
+          <option value="economy">Money &amp; property</option>
+          <option value="secret">Secret moments</option>
+          <option value="meta">Platinum &amp; 100%</option>
+        </select>
+      </label>
+      <label>Grade
+        <select id="gradeFilter">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label class="check"><input id="missableOnly" type="checkbox"> Missable only</label>
+      <label class="check"><input id="spoilerToggle" type="checkbox"> Hide spoilers</label>
+      <button id="exportBtn" type="button">Export progress</button>
+      <label class="import-label">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
+    </div>
+    <p id="listSummary" class="list-summary"></p>
+    <div class="checklist-layout">
+      <ol id="trophyList" class="trophy-list"></ol>
+      <aside id="detail" class="detail" aria-label="Trophy guide" hidden>
+        <button id="detailClose" type="button" class="detail-close">Close ✕</button>
+        <div id="detailBody"></div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="view-roadmap" class="view" hidden>
+    <p class="view-intro">Six stages, in the order to play them. Each stage lists the trophies it
+    covers and how many of them you have earned. The order is built from the
+    official trophy descriptions: story first, then side strands, then
+    activities, collectibles, crime and money, and a final cleanup before the
+    platinum pops.</p>
+    <div id="roadmapStages" class="roadmap"></div>
+  </section>
+
+  <section id="view-missables" class="view" hidden>
+    <p class="view-intro">These 18 trophies can pass you by: a story moment that only comes once,
+    a partner who is only beside you for a stretch of the game, a choice you
+    only get to make one way, or a one-off event. Do them before the story
+    moves on — after the finale, the only fix is a new playthrough or an
+    earlier save.</p>
+    <div id="missableList" class="missable-list"></div>
+  </section>
+
+  <section id="view-tracker" class="view" hidden>
+    <p class="view-intro">Your progress lives in this browser only (localStorage). Export it to a
+    file before you clear your browser data, and import it back on any machine.</p>
+    <div id="trackerStats" class="tracker-stats"></div>
+    <div class="tracker-actions">
+      <button id="exportBtn2" type="button">Export progress</button>
+      <label class="import-label">Import progress <input id="importFile2" type="file" accept="application/json,.json"></label>
+      <button id="resetBtn" type="button" class="danger">Reset all progress</button>
+    </div>
+    <p class="tracker-note">Earned trophies are ticked on the checklist. Hidden trophies stay hidden
+    while “Hide spoilers” is on, until you tick them earned.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Names, descriptions and grades are the official PlayStation 5 list, as
+  listed by Exophase and PSNProfiles. Guides are written in our own words from
+  those descriptions; where a place or step is not pinned down by the official
+  description, the guide says so plainly. No Rockstar Games logo, artwork or
+  game screenshot is used here. This guide works offline and makes no network
+  requests.</p>
+  <p class="footer-sources">Sources: Exophase trophy list (exophase.com/game/grand-theft-auto-vi-psn/trophies)
+  · PSNProfiles trophy list (psnprofiles.com/trophies/43531-grand-theft-auto-vi)</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
